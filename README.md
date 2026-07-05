@@ -47,7 +47,6 @@ Here is a list of all the changes (that i remember) I have made to vanilla conte
 * Sin Jokers - +4 mult, instead of +3
 * Sixth Sense - destroys the first card scored in the first played hand of the round if it is a 6 and creates a Spectral
 * DNA - copies the first card scored in the first played hand of the round, rather than just the first card played
-* Hanging Chad - retriggers the first two cards scored once insted of the first card twice
 * Satellite - starts at $2 a round, still scaling by +$1 for every unique planet card used this run
 * Swashbuckler - now adds its own sell value, and the sell value of Jokers and Consumables to Mult
 * Bloodstone - 1 in 3 chance for scored Hearts to gain a Red Seal
