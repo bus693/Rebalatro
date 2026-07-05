@@ -64,59 +64,6 @@ SMODS.Joker:take_ownership('j_idol', {
     end
 }, true)
 
-SMODS.Joker:take_ownership('j_to_the_moon', {  
-    loc_vars = function(self, info_queue, card)
-        local interest_val = (type(card.ability.extra) == 'table' and card.ability.extra.interest) or 1
-        return { vars = { interest_val, 10 } }
-    end,
-    
-    update = function(self, card, dt)
-        if G.GAME then
-            local ttm_count = 0
-            local interest_val = (type(card.ability.extra) == 'table' and card.ability.extra.interest) or 1
-            
-            if G.jokers and G.jokers.cards then
-                for _, v in ipairs(G.jokers.cards) do
-                    if v.ability and v.ability.name == 'To the Moon' and not v.debuff then
-                        ttm_count = ttm_count + 1
-                    end
-                end
-            end
-            
-            G.GAME.interest_amount = 1 + (ttm_count * interest_val)
-            
-            local is_green = G.GAME.selected_back and (G.GAME.selected_back.effect.center.key == 'b_green')
-            local cap = is_green and 0 or 25
-            
-            if G.GAME.used_vouchers.v_seed_money then cap = cap + 25 end
-            if G.GAME.used_vouchers.v_money_tree then cap = cap + 50 end
-            G.GAME.interest_cap = cap + (ttm_count * 10)
-        end
-    end,
-    
-    remove_from_deck = function(self, card, from_debuff)
-        local ttm_count = 0
-        local interest_val = (type(card.ability.extra) == 'table' and card.ability.extra.interest) or 1
-        
-        if G.jokers and G.jokers.cards then
-            for _, v in ipairs(G.jokers.cards) do
-                if v ~= card and v.ability and v.ability.name == 'To the Moon' and not v.debuff then
-                    ttm_count = ttm_count + 1
-                end
-            end
-        end
-        
-        G.GAME.interest_amount = 1 + (ttm_count * interest_val)
-        
-        local is_green = G.GAME.selected_back and (G.GAME.selected_back.effect.center.key == 'b_green')
-        local cap = is_green and 0 or 25
-        
-        if G.GAME.used_vouchers.v_seed_money then cap = cap + 25 end
-        if G.GAME.used_vouchers.v_money_tree then cap = cap + 50 end
-        
-        G.GAME.interest_cap = cap + (ttm_count * 10)
-    end
-}, true)
 
 SMODS.Joker:take_ownership('j_hit_the_road', { perishable_compat = false }, true)
 
@@ -207,7 +154,7 @@ SMODS.Joker:take_ownership('j_satellite', {
             end
         end
         
-        return 2 + (planets_used * card.ability.extra)
+        return 1 + (planets_used * card.ability.extra)
     end
 }, true)
 
@@ -372,24 +319,77 @@ SMODS.Joker:take_ownership('j_sixth_sense', {
     end
 }, true)
 
-SMODS.Joker:take_ownership('j_hanging_chad', {
-    config = {extra = 1},
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra } }
-    end,
+SMODS.Joker:take_ownership('j_faceless', {
+    config = {extra = {dollars = 3, faces = 3}}
+}, true)
+
+SMODS.Joker:take_ownership('j_baron', {
+    config = {extra = 2}
+}, true)
+
+SMODS.Joker:take_ownership('j_castle', {
+    config = {extra = {chips = 0, chip_mod = 2}}
+}, true)
+
+SMODS.Joker:take_ownership('j_lucky_cat', {
+    config = {Xmult = 1, extra = 0.25}
+}, true)
+
+SMODS.Joker:take_ownership('j_space', {
+    config = {extra = 3}
+}, true)
+
+SMODS.Joker:take_ownership('j_loyalty_card', {
+    config = {extra = {Xmult = 4, every = 4, remaining = "4 remaining"}}
+}, true)
+
+SMODS.Joker:take_ownership('j_splash', {
     calculate = function(self, card, context)
-        if context.repetition and context.cardarea == G.play then
-            if context.other_card == context.scoring_hand[1] or context.other_card == context.scoring_hand[2] then
-                return {
-                    message = localize('k_again_ex'),
-                    repetitions = card.ability.extra,
-                    card = card
-                }
+        if context.before and context.scoring_hand then
+            for i = 1, #context.scoring_hand do
+                if context.scoring_hand[i].debuff then
+                    context.scoring_hand[i]:set_debuff(false)
+                    context.scoring_hand[i].ability.splash_undebuffed = true
+                end
+            end
+        end
+        if context.after and context.full_hand then
+            for i = 1, #context.full_hand do
+                if context.full_hand[i].ability.splash_undebuffed then
+                    context.full_hand[i]:set_debuff(true)
+                    context.full_hand[i].ability.splash_undebuffed = nil
+                end
             end
         end
     end
 }, true)
 
-SMODS.Joker:take_ownership('j_faceless', {
-    config = {extra = {dollars = 4, faces = 3}}
+SMODS.Joker:take_ownership('j_popcorn', {
+    config = { mult = 24, extra = 4 }
 }, true)
+
+SMODS.Joker:take_ownership('j_turtle_bean', {
+    config = { extra = { h_size = 6, h_mod = 1 } }
+}, true)
+
+SMODS.Joker:take_ownership('j_odd_todd', {
+    config = {extra = 35}
+}, true)
+
+SMODS.Joker:take_ownership('j_even_steven', {
+    config = {extra = 6}
+}, true)
+
+SMODS.Joker:take_ownership('j_hiker', {
+    config = {extra = 7}
+}, true)
+
+SMODS.Joker:take_ownership('j_smiley', {
+    config = {extra = 6}
+}, true)
+
+SMODS.Joker:take_ownership('j_scary_face', {
+    config = {extra = 35}
+}, true)
+
+SMODS.Joker:take_ownership('j_onyx_agate', { config = {extra = 8} }, true)

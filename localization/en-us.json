@@ -1,336 +1,498 @@
 {
-  "descriptions": {
-    "Back": {
-      "b_black": {
-        "text": [
-          "{C:attention}+1{} Joker slot",
-          "{C:red}-1{} discard",
-          "every round"
-        ]
-      },
-      "b_nebula": {
-        "text": [
-          "Open a free {C:planet}Mega Celestial{}",
-          "pack after exiting the",
-          "first shop of each Ante"
-        ]
-      },
-      "b_zodiac": {
-        "text": [
-          "Jokers no longer",
-	  "appear in the {C:attention}shop{},",
-          "start with {C:tarot,T:v_tarot_merchant}Tarot Merchant{}",
-          "and {C:planet,T:v_planet_merchant}Planet Merchant{}"
-        ]
-      }
-    },
-    "Spectral": {
-      "c_ouija": {
-        "text": [
-          "Converts all cards",
-          "in hand to a single",
-          "random {C:attention}rank{}",
-          "{C:red}-1{} discard"
-        ]
-      },
-      "c_black_hole": {
-        "text": [
-          "Upgrade every",
-          "{C:legendary,E:1}poker hand{}",
-          "by {C:attention}3{} levels"
-        ]
-      },
-      "c_wraith": {
-        "name": "Wraith",
-        "text": [
-          "Spawns a random",
-          "{C:rare}Rare{} {C:attention}Joker{},",
-          "{C:red}Halves{} your {C:money}money"
-        ]
-      },
-      "c_immolate": {
-        "name": "Immolate",
-        "text": [
-          "Destroys {C:attention}5{} random",
-          "cards in hand, gain {C:money}$20{}",
-          "and destroy a random {C:attention}Joker{}"
-        ]
-      }
-    },
-    "Joker": {
-      "j_idol": {
-        "name": "The Idol",
-        "text": [
-          "This Joker gains {X:mult,C:white} X#1# {} Mult",
-          "each time a played {C:attention}#3#{}",
-          "of {V:1}#4#{} is scored",
-          "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
-          "{s:0.8}Card changes every round{}"
-        ]
-      },
-      "j_troubadour": {
-        "text": [
-          "{C:attention}+#1#{} hand size,",
-          "{C:blue}-#2#{} hands each round"
-        ]
-      },
-      "j_bloodstone": {
-        "name": "Bloodstone",
-        "text": [
-          "{C:green}#1# in #2#{} chance for",
-          "played cards with",
-          "{C:hearts}Heart{} suit to gain a",
-          "{C:red}Red Seal{} when scored"
-        ]
-      },
-      "j_dna": {
-        "text": [
-          "Add a permanent copy of the",
-          "{C:attention}first scored{} card",
-          "in the {C:attention}first hand{} of round",
-          "to deck and draw it to {C:attention}hand{}"
-        ]
-      },
-      "j_satellite": {
-        "text": [
-          "Earn {C:money}$#2#{} at end of round",
-          "Payout increases by {C:money}$#1#{}",
-          "per unique {C:planet}Planet{}",
-          "card used this run"
-        ]
-      },
-      "j_swashbuckler": {
-        "text": [
-          "Adds the sell value of",
-          "all owned {C:attention}Jokers{} and",
-          "held {C:attention}consumables{} to Mult",
-          "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)"
-        ]
-      },
-      "j_throwback": {
-        "text": [
-          "{X:mult,C:white} X#1# {} Mult for each",
-          "{C:attention}Tag{} gained this run",
-          "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
-        ]
-      },
-      "j_to_the_moon": {
-        "name": "To the Moon",
-        "text": [
-          "Earn an extra {C:money}$#1#{} of",
-          "{C:attention}interest{} for every {C:money}$5{} you",
-          "have at end of round.",
-          "Increase cap on interest earned",
-          "per round by {C:money}$2{}"
-        ]
-      },
-      "j_hanging_chad": {
-        "name": "Hanging Chad",
-        "text": [
-          "Retrigger the {C:attention}first two{} played",
-          "cards used in scoring",
-          "{C:attention}#1#{} additional time"
-        ]
-      },
-      "j_sixth_sense": {
-        "name": "Sixth Sense",
-        "text": [
-          "If the {C:attention}first scored card{} in the",
-          "{C:attention}first hand{} of round is a {C:attention}6{}, destroy it",
-          "and create a {C:spectral}Spectral{} card",
-          "{C:inactive}(Must have room)"
-        ]
-      },
-      "j_flower_pot": {
-        "name": "Flower Pot",
-        "text": [
-          "{X:mult,C:white} X#1# {} Mult if poker hand",
-          "contains at least {C:attention}3{}",
-          "cards with a unique {C:attention}suit{}"
-        ]
-      }
-    },
-    "Voucher": {
-      "v_hieroglyph": {
-        "text": [
-          "{C:attention}-#1#{} Ante",
-          "{C:red}-2{} discards",
-          "each round"
-        ]
-      },
-      "v_seed_money": {
-        "text": [
-          "Raise the cap on",
-          "interest earned per",
-          "round by {C:money}$5{}"
-        ]
-      },
-      "v_money_tree": {
-        "text": [
-          "Raise the cap on",
-          "interest earned per",
-          "round by {C:money}$10{}"
-        ]
-      },
-      "v_planet_merchant": {
-        "text": [
-          "{C:planet}Planet{} cards appear",
-          "{C:attention}2X{} more frequently",
-          "in the shop,",
-          "{C:money}-$1{} {C:planet}Planet{} & {C:planet}Celestial{} cost"
-        ]
-      },
-      "v_planet_tycoon": {
-        "text": [
-          "{C:planet}Planet{} cards appear",
-          "{C:attention}4X{} more frequently",
-          "in the shop,",
-          "{C:money}-$1{} {C:planet}Planet{} & {C:planet}Celestial{} cost"
-        ]
-      },
-      "v_tarot_merchant": {
-        "text": [
-          "{C:tarot}Tarot{} cards appear",
-          "{C:attention}2X{} more frequently",
-          "in the shop,",
-          "{C:money}-$1{} {C:tarot}Tarot{} & {C:tarot}Arcana{} cost"
-        ]
-      },
-      "v_tarot_tycoon": {
-        "text": [
-          "{C:tarot}Tarot{} cards appear",
-          "{C:attention}4X{} more frequently",
-          "in the shop,",
-          "{C:money}-$1{} {C:tarot}Tarot{} & {C:tarot}Arcana{} cost"
-        ]
-      },
-      "v_hone": {
-        "text": [
-          "{C:dark_edition}Foil{}, {C:dark_edition}Holographic{},",
-          "{C:dark_edition}Polychrome{}, and {C:dark_edition}Negative{} cards",
-          "appear {C:attention}#1#X{} more often"
-        ]
-      },
-      "v_glow_up": {
-        "text": [
-          "{C:dark_edition}Foil{}, {C:dark_edition}Holographic{},",
-          "{C:dark_edition}Polychrome{}, and {C:dark_edition}Negative{} cards",
-          "appear {C:attention}#1#X{} more often"
-        ]
-      },
-      "v_magic_trick": {
-        "text": [
-          "{C:attention}+1{} card slot available in shop",
-          "{C:attention}Playing cards{} can",
-          "appear in the shop"
-        ]
-      },
-      "v_illusion": {
-        "text": [
-          "{C:attention}Playing cards{} in shop",
-          "may have an {C:dark_edition}edition{},",
-          "an {C:attention}enhancement{},",
-          "and a {C:attention}seal{}"
-        ]
-      },
-      "v_observatory": {
-        "name": "Observatory",
-        "text": [
-          "{C:planet}Planet{} cards give",
-          "{C:attention}+2{} levels instead of {C:attention}+1{}"
-        ]
-      }
-    },
-    "Stake": {
-      "stake_blue": {
-        "text": [
-          "{C:blue}-1{} hands,",
-          "{C:red}+1{} discards",
-          "{s:0.8}Applies all previous Stakes{}"
-        ]
-      },
-	"stake_red": {
-        "text": [
-	"{C:attention}Blind{} rewards",
-	"reduced by {C:money}$1{}",
-        "{s:0.8}Applies all previous Stakes{}"
-        ]
-      }
-    },
-    "Tag": {
-      "tag_coupon": {
-        "text": [
-          "Initial cards, booster",
-          "packs and {C:voucher}vouchers{} in",
-          "next shop are {C:attention}free{}"
-        ]
-      },
-      "tag_voucher": {
-        "text": [
-          "Adds a {C:attention}free{}",
-          "{C:voucher}Voucher{} to the next shop"
-        ]
-      },
-      "tag_ethereal": {
-        "text": [
-          "Gives a free",
-          "{C:spectral}Jumbo Spectral Pack{}"
-        ]
-      }
-    },
-    "Blind": {
-      "bl_serpent": {
-        "name": "The Serpent",
-        "text": [
-          "After Play or Discard",
-          "draw at most 3 cards"
-        ]
-      },
-      "bl_needle": {
-        "name": "The Needle",
-        "text": [
-          "Play only 1 hand"
-        ]
-      },
-      "bl_water": {
-        "name": "The Water",
-        "text": [
-          "Start with 0 discards"
-        ]
-      },
-      "bl_hook": {
-        "name": "The Hook",
-        "text": [
-          "Discards 3 random",
-          "cards per hand played"
-        ]
-      },
-      "bl_wheel": {
-        "name": "The Wheel",
-        "text": [
-          "Every other card",
-          "is drawn face down"
-        ]
-      },
-      "bl_final_acorn": {
-        "name": "Amber Acorn",
-        "text": [
-          "Flips and shuffles",
-          "all Joker cards",
-          "and reshuffles on discard"
-        ]
-      }
-    },
-    "Other": {
-      "blue_seal": {
-        "name": "Blue Seal",
-        "text": [
-          "Creates the {C:planet}Planet{} card",
-          "for final played {C:attention}poker hand{}",
-          "of round if {C:attention}held{} in hand",
-          "Scrapes off after {C:attention}#1#{} triggers"
-        ]
-      }
+    "descriptions": {
+        "Back": {
+            "b_black": {
+                "name": "Black Deck",
+                "text": [
+                    "{C:attention}+1{} Joker slot",
+                    "{C:blue}-1{} hand",
+                    "every round"
+                ]
+            },
+            "b_nebula": {
+                "text": [
+                    "Open a free {C:planet}Mega Celestial{}",
+                    "pack after exiting the",
+                    "first shop of each Ante"
+                ]
+            },
+            "b_zodiac": {
+                "text": [
+                    "Start with {C:planet,T:v_planet_merchant}Planet Merchant{}",
+                    "and {C:tarot,T:v_tarot_merchant}Tarot Merchant{}",
+                    "{C:inactive,s:0.8}(Arcana packs, Celestial{}",
+                    "{C:inactive,s:0.8}packs, and Jokers no longer{}",
+                    "{C:inactive,s:0.8}appear in the shop){}"
+                ]
+            },
+            "b_ghost": {
+                "name": "Ghost Deck",
+                "text": [
+                    "{C:spectral}Spectral{} cards may",
+                    "appear in the shop",
+                    "and in {C:tarot}Arcana{} packs,",
+                    "start with a {C:spectral,T:c_hex}Hex{} card"
+                ]
+            }
+        },
+        "Spectral": {
+            "c_ouija": {
+                "text": [
+                    "Converts all cards",
+                    "in hand to a single",
+                    "random {C:attention}rank{}",
+                    "{C:red}-1{} discard"
+                ]
+            },
+            "c_black_hole": {
+                "text": [
+                    "Upgrade every",
+                    "{C:legendary,E:1}poker hand{}",
+                    "by {C:attention}3{} levels"
+                ]
+            },
+            "c_wraith": {
+                "name": "Wraith",
+                "text": [
+                    "Spawns a random",
+                    "{C:rare}Rare{} {C:attention}Joker{},",
+                    "{C:red}Halves{} your {C:money}money"
+                ]
+            },
+            "c_familiar": {
+                "name": "Familiar",
+                "text": [
+                    "Destroy {C:attention}1{} selected card in hand,",
+                    "add {C:attention}#1#{} random {C:attention}Enhanced face{} cards",
+                    "to your hand"
+                ]
+            },
+            "c_grim": {
+                "name": "Grim",
+                "text": [
+                    "Destroy {C:attention}1{} selected card in hand,",
+                    "add {C:attention}#1#{} random {C:attention}Enhanced Aces{}",
+                    "to your hand"
+                ]
+            },
+            "c_incantation": {
+                "name": "Incantation",
+                "text": [
+                    "Destroy {C:attention}1{} selected card in hand,",
+                    "add {C:attention}#1#{} random {C:attention}Enhanced numbered{} cards",
+                    "to your hand"
+                ]
+            },
+            "c_hex": {
+                "name": "Hex",
+                "text": [
+                    "Add {C:dark_edition}Polychrome{} to a",
+                    "random {C:attention}Joker{}, destroy",
+                    "a random other {C:attention}Joker{}"
+                ]
+            }
+        },
+        "Joker": {
+            "j_idol": {
+                "name": "The Idol",
+                "text": [
+                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
+                    "each time a played {C:attention}#3#{}",
+                    "of {V:1}#4#{} is scored",
+                    "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
+                    "{s:0.8}Card changes every round{}"
+                ]
+            },
+            "j_troubadour": {
+                "text": [
+                    "{C:attention}+#1#{} hand size,",
+                    "{C:blue}-#2#{} hand each round"
+                ]
+            },
+            "j_bloodstone": {
+                "name": "Bloodstone",
+                "text": [
+                    "{C:green}#1# in #2#{} chance for",
+                    "played cards with",
+                    "{C:hearts}Heart{} suit to gain a",
+                    "{C:red}Red Seal{} when scored"
+                ]
+            },
+            "j_dna": {
+                "text": [
+                    "Add a permanent copy of the",
+                    "{C:attention}first scored{} card",
+                    "in the {C:attention}first hand{} of round",
+                    "to deck and draw it to {C:attention}hand{}"
+                ]
+            },
+            "j_satellite": {
+                "text": [
+                    "Earn {C:money}$#2#{} at end of round",
+                    "Payout increases by {C:money}$#1#{}",
+                    "per unique {C:planet}Planet{}",
+                    "card used this run"
+                ]
+            },
+            "j_swashbuckler": {
+                "text": [
+                    "Adds the sell value of",
+                    "all owned {C:attention}Jokers{} and",
+                    "held {C:attention}consumables{} to Mult",
+                    "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)"
+                ]
+            },
+            "j_throwback": {
+                "text": [
+                    "{X:mult,C:white} X#1# {} Mult for each",
+                    "{C:attention}Tag{} gained this run",
+                    "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
+                ]
+            },
+            "j_sixth_sense": {
+                "name": "Sixth Sense",
+                "text": [
+                    "If the {C:attention}first scored card{} in the",
+                    "{C:attention}first hand{} of round is a {C:attention}6{}, destroy it",
+                    "and create a {C:spectral}Spectral{} card",
+                    "{C:inactive}(Must have room)"
+                ]
+            },
+            "j_flower_pot": {
+                "name": "Flower Pot",
+                "text": [
+                    "{X:mult,C:white} X#1# {} Mult if poker hand",
+                    "contains at least {C:attention}3{}",
+                    "cards with a unique {C:attention}suit{}"
+                ]
+            },
+            "j_baron": {
+                "name": "Baron",
+                "text": [
+                    "{C:attention}Kings{} and {C:attention}Queens{}",
+                    "held in hand",
+                    "give {X:mult,C:white} X#1# {} Mult"
+                ]
+            },
+            "j_castle": {
+                "name": "Castle",
+                "text": [
+                    "This Joker gains {C:chips}+#1#{} Chips",
+                    "per discarded {V:1}#2#{} card,",
+                    "suit changes every round",
+                    "{C:inactive}(Currently {C:chips}+#3#{C:inactive} Chips)"
+                ]
+            },
+            "j_lucky_cat": {
+                "name": "Lucky Cat",
+                "text": [
+                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
+                    "every time a {C:attention}Lucky{}",
+                    "card successfully",
+                    "triggers",
+                    "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
+                ]
+            },
+            "j_splash": {
+                "name": "Splash",
+                "text": [
+                    "All {C:attention}played cards",
+                    "will score"
+                ]
+            }
+        },
+        "Voucher": {
+            "v_hieroglyph": {
+                "text": [
+                    "{C:attention}-#1#{} Ante",
+                    "{C:red}-2{} discards",
+                    "each round"
+                ]
+            },
+            "v_seed_money": {
+                "text": [
+                    "Raise the cap on",
+                    "interest earned per",
+                    "round by {C:money}$5{}"
+                ]
+            },
+            "v_money_tree": {
+                "text": [
+                    "Raise the cap on",
+                    "interest earned per",
+                    "round by {C:money}$10{}"
+                ]
+            },
+            "v_planet_merchant": {
+                "text": [
+                    "{C:planet}Planet{} cards appear",
+                    "{C:attention}2X{} more frequently",
+                    "in the shop,",
+                    "{C:money}-$1{} {C:planet}Planet{} & {C:planet}Celestial{} cost"
+                ]
+            },
+            "v_planet_tycoon": {
+                "text": [
+                    "{C:planet}Planet{} cards appear",
+                    "{C:attention}4X{} more frequently",
+                    "in the shop,",
+                    "{C:money}-$1{} {C:planet}Planet{} & {C:planet}Celestial{} cost"
+                ]
+            },
+            "v_tarot_merchant": {
+                "text": [
+                    "{C:tarot}Tarot{} cards appear",
+                    "{C:attention}2X{} more frequently",
+                    "in the shop,",
+                    "{C:money}-$1{} {C:tarot}Tarot{} & {C:tarot}Arcana{} cost"
+                ]
+            },
+            "v_tarot_tycoon": {
+                "text": [
+                    "{C:tarot}Tarot{} cards appear",
+                    "{C:attention}4X{} more frequently",
+                    "in the shop,",
+                    "{C:money}-{} {C:tarot}Tarot{} & {C:tarot}Arcana{} cost"
+                ]
+            },
+            "v_hone": {
+                "text": [
+                    "{C:dark_edition}Foil{}, {C:dark_edition}Holographic{},",
+                    "{C:dark_edition}Polychrome{}, and {C:dark_edition}Negative{} cards",
+                    "appear {C:attention}#1#X{} more often"
+                ]
+            },
+            "v_glow_up": {
+                "text": [
+                    "{C:dark_edition}Foil{}, {C:dark_edition}Holographic{},",
+                    "{C:dark_edition}Polychrome{}, and {C:dark_edition}Negative{} cards",
+                    "appear {C:attention}#1#X{} more often"
+                ]
+            },
+            "v_magic_trick": {
+                "text": [
+                    "{C:attention}+#1#{} playing card slot",
+                    "available in shop"
+                ]
+            },
+            "v_illusion": {
+                "text": [
+                    "{C:attention}Playing cards{} in shop",
+                    "and {C:attention}Standard Packs{}",
+                    "always have an {C:enhanced}Enhancement{},",
+                    "{C:attention}Seal{}, or {C:dark_edition}Edition{}"
+                ]
+            },
+            "v_observatory": {
+                "name": "Observatory",
+                "text": [
+                    "{C:planet}Planet{} cards give",
+                    "{C:attention}+2{} levels instead of {C:attention}+1{}"
+                ]
+            },
+            "v_omen_globe": {
+                "name": "Omen Globe",
+                "text": [
+                    "{C:attention}+#1#{} consumable slot"
+                ]
+            }
+        },
+        "Stake": {
+            "stake_blue": {
+                "text": [
+                    "Starting at {C:attention}Ante 5{}:",
+                    "{C:attention}Small Blind{} is replaced with {C:attention}Big Blind{}",
+                    "{C:attention}Big Blind{} is replaced with a {C:attention}Boss Blind{}",
+                    "{s:0.8}Applies all previous Stakes{}"
+                ]
+            },
+            "stake_red": {
+                "text": [
+                    "{C:attention}Blind{} rewards",
+                    "reduced by {C:money}$1{}",
+                    "{s:0.8}Applies all previous Stakes{}"
+                ]
+            }
+        },
+        "Tag": {
+            "tag_uncommon": {
+                "name": "Uncommon Tag",
+                "text": [
+                    "Shop has a free",
+                    "stickerless {C:green}Uncommon{} Joker"
+                ]
+            },
+            "tag_rare": {
+                "name": "Rare Tag",
+                "text": [
+                    "Shop has a free",
+                    "stickerless {C:red}Rare{} Joker"
+                ]
+            },
+            "tag_foil": {
+                "name": "Foil Tag",
+                "text": [
+                    "Next base edition shop",
+                    "or Buffoon pack Joker is",
+                    "free, stickerless, and {C:dark_edition}Foil{}"
+                ]
+            },
+            "tag_holo": {
+                "name": "Holographic Tag",
+                "text": [
+                    "Next base edition shop",
+                    "or Buffoon pack Joker is",
+                    "free, stickerless, and {C:dark_edition}Holographic{}"
+                ]
+            },
+            "tag_polychrome": {
+                "name": "Polychrome Tag",
+                "text": [
+                    "Next base edition shop",
+                    "or Buffoon pack Joker is",
+                    "free, stickerless, and {C:dark_edition}Polychrome{}"
+                ]
+            },
+            "tag_negative": {
+                "name": "Negative Tag",
+                "text": [
+                    "Next base edition shop",
+                    "or Buffoon pack Joker is",
+                    "free, stickerless, and {C:dark_edition}Negative{}"
+                ]
+            },
+            "tag_coupon": {
+                "name": "Coupon Tag",
+                "text": [
+                    "Initial cards, booster",
+                    "packs and {C:voucher}vouchers{} in",
+                    "next shop are {C:attention}free{}"
+                ]
+            },
+            "tag_voucher": {
+                "name": "Voucher Tag",
+                "text": [
+                    "Adds a {C:attention}free{}",
+                    "{C:voucher}Voucher{} to the next shop"
+                ]
+            },
+            "tag_ethereal": {
+                "name": "Ethereal Tag",
+                "text": [
+                    "Gives a free",
+                    "{C:spectral}Jumbo Spectral Pack{}"
+                ]
+            },
+            "tag_juggle": {
+                "name": "Juggle Tag",
+                "text": [
+                    "{C:attention}+3{} hand size",
+                    "for the rest",
+                    "of the {C:attention}Ante{}"
+                ]
+            }
+        },
+        "Blind": {
+            "bl_serpent": {
+                "name": "The Serpent",
+                "text": [
+                    "After Play or Discard",
+                    "draw at most 3 cards"
+                ]
+            },
+            "bl_needle": {
+                "name": "The Needle",
+                "text": [
+                    "Play only 1 hand"
+                ]
+            },
+            "bl_water": {
+                "name": "The Water",
+                "text": [
+                    "Start with 0 discards"
+                ]
+            },
+            "bl_hook": {
+                "name": "The Hook",
+                "text": [
+                    "Discards 3 random",
+                    "cards per hand played"
+                ]
+            },
+            "bl_wheel": {
+                "name": "The Wheel",
+                "text": [
+                    "Every other card",
+                    "is drawn face down"
+                ]
+            },
+            "bl_final_acorn": {
+                "name": "Amber Acorn",
+                "text": [
+                    "Flips and shuffles",
+                    "all Joker cards",
+                    "{s:0.8}Reshuffles on discard"
+                ]
+            },
+            "bl_final_leaf": {
+                "name": "Verdant Leaf",
+                "text": [
+                    "All cards are debuffed",
+                    "Debuff is removed from",
+                    "cards held in hand",
+                    "when a Joker is sold"
+                ]
+            },
+            "bl_final_heart": {
+                "name": "Crimson Heart",
+                "text": [
+                    "Two rightmost Jokers",
+                    "are disabled"
+                ]
+            },
+            "bl_final_bell": {
+                "name": "Cerulean Bell",
+                "text": [
+                    "1 card is always selected",
+                    "Selected card is removed",
+                    "from the played hand"
+                ]
+            }
+        },
+        "Other": {
+            "blue_seal": {
+                "name": "Blue Seal",
+                "text": [
+                    "Creates the {C:planet}Planet{} card",
+                    "for final played {C:attention}poker hand{}",
+                    "of round if {C:attention}held{} in hand",
+                    "{C:inactive}({S:1.1,C:red,E:2}Scrapes off{} {C:inactive}after{} {C:attention}#1#{} {C:inactive}triggers){}"
+                ]
+            }
+        },
+        "Enhanced": {
+            "m_mult": {
+                "name": "Mult Card",
+                "text": [
+                    "{C:mult}#1#{} Mult"
+                ]
+            },
+            "m_wild": {
+                "name": "Wild Card",
+                "text": [
+                    "Can be used as any suit",
+                    "Cannot be debuffed"
+                ]
+            },
+            "m_stone": {
+                "name": "Stone Card",
+                "text": [
+                    "{C:chips}#1#{} Chips,",
+                    "no rank or suit",
+                    "Always played",
+                    "and scored"
+                ]
+            }
+        }
     }
-  }
 }

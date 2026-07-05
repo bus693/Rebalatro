@@ -1,3 +1,23 @@
+local allowed_ante_1 = {
+    tag_charm = true, tag_economy = true, tag_voucher = true, tag_uncommon = true,
+    tag_rare = true, tag_polychrome = true, tag_holographic = true, tag_foil = true,
+    tag_coupon = true, tag_investment = true
+}
+
+local vanilla_tags = {
+    'tag_uncommon', 'tag_rare', 'tag_negative', 'tag_foil', 'tag_holographic',
+    'tag_polychrome', 'tag_investment', 'tag_voucher', 'tag_boss', 'tag_standard',
+    'tag_charm', 'tag_meteor', 'tag_buffoon', 'tag_handy', 'tag_garbage',
+    'tag_coupon', 'tag_double', 'tag_juggle', 'tag_d_six',
+    'tag_top_up', 'tag_skip', 'tag_orbital', 'tag_economy'
+}
+
+for _, tag in ipairs(vanilla_tags) do
+    if not allowed_ante_1[tag] then
+        SMODS.Tag:take_ownership(tag, { min_ante = 2 }, true)
+    end
+end
+
 SMODS.Tag:take_ownership('tag_coupon', {
 	apply = function(self, tag, context)
 	if context.type == 'shop_final_pass' then
@@ -53,6 +73,7 @@ SMODS.Tag:take_ownership('tag_voucher', {
 }, true)
 
 SMODS.Tag:take_ownership('tag_ethereal', {
+    min_ante = 2,
 	apply = function(self, tag, context)
 	if context.type == 'immediate' then
 	local lock = tag.ID
@@ -117,6 +138,8 @@ SMODS.Tag {
         end
     end
 }
+
 SMODS.Tag:take_ownership('tag_investment', {
+	    max_ante = 2,
     config = {type = 'eval', dollars = 20}
 }, true)
